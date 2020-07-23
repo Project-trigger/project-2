@@ -4,7 +4,7 @@
 
 Create a social media platform to debate hot topics with friends. 
 
-## User Story :pencil2:
+## User Story
 
 As a debator with limited means I want to better my understanding on a given topic compared to other user.
 Then I either create a debate or choose a debate to be a part of with a challenger.
