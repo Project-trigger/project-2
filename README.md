@@ -40,7 +40,16 @@ Vandolphe Baptiste
 
 ## Project Board
 
+<details><summary>CLICK ME</summary>
+<p>
 
+![GitHub Logo](/Images/Flowchart.JPG)
+![GitHub Logo](/Images/homepage.JPG)
+![GitHub Logo](/Images/postPage.JPG)
+![GitHub Logo](/Images/resultsPage.JPG)
+
+</p>
+</details>
 
 ## Badges
 
