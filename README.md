@@ -48,7 +48,20 @@ Vandolphe Baptiste
 
 ## Acceptance Criteria / MVP
 
+Dedicated Challenger, Incumbent, and Spectator sections to create a dynamic community.
 
+Allow members to post an arguement.
 
-## Table of Contents :clipboard:
+Allow members to vote on arguement.
+
+Allow members to comment on arguements.
+
+Allow members to view other peoples arguements.
+
+Randomize the arguement selection. 
+
+Allow members to view their own posted topics. 
+
+Sign Up page that will authenticate users.
+
 
