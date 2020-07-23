@@ -12,6 +12,16 @@ As a challenger with a debate in mind I write my opinion challenging the incumbe
 
 ## Wireframes
 
+<details><summary>CLICK ME</summary>
+<p>
+
+![GitHub Logo](/Images/Flowchart.JPG)
+![GitHub Logo](/Images/homepage.JPG)
+![GitHub Logo](/Images/postPage.JPG)
+![GitHub Logo](/Images/resultsPage.JPG)
+
+</p>
+</details>
 
 ## List of Technologies Used :gear:
 
@@ -40,16 +50,6 @@ Vandolphe Baptiste
 
 ## Project Board :clipboard:
 
-<details><summary>CLICK ME</summary>
-<p>
-
-![GitHub Logo](/Images/Flowchart.JPG)
-![GitHub Logo](/Images/homepage.JPG)
-![GitHub Logo](/Images/postPage.JPG)
-![GitHub Logo](/Images/resultsPage.JPG)
-
-</p>
-</details>
 
 ## Badges
 
@@ -72,5 +72,4 @@ Randomize the arguement selection.
 Allow members to view their own posted topics. 
 
 Sign Up page that will authenticate users.
-
 
