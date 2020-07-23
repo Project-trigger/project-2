@@ -1,4 +1,4 @@
-# Triggered 
+
 
 ## Description 
 
@@ -13,7 +13,7 @@ As a challenger with a debate in mind I write my opinion challenging the incumbe
 ## Wireframes
 
 
-## List of Technologies Used
+## List of Technologies Used :gear:
 
 Javascript
 CSS 
@@ -38,7 +38,7 @@ Michael Srithapin
 
 Vandolphe Baptiste
 
-## Project Board
+## Project Board :clipboard:
 
 <details><summary>CLICK ME</summary>
 <p>
@@ -55,7 +55,7 @@ Vandolphe Baptiste
 
 
 
-## Acceptance Criteria / MVP
+## Acceptance Criteria / MVP :white_check_mark:
 
 Dedicated Challenger, Incumbent, and Spectator sections to create a dynamic community.
 
