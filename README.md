@@ -33,7 +33,6 @@ Postman
 Node
 Express
 API
-Handlebars.js
 npm
 Heroku
 (New Technology)
