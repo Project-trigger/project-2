@@ -4,13 +4,15 @@ import React from "react";
 
 function Signup() {
   return (
-
-    <nav className="navbar navbar-default">
-      <div className="container-fluid">
-        <div className="navbar-header">
+   
+  
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+
 
   );
 }
