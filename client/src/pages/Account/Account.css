@@ -1,0 +1,29 @@
+.appHeader {
+    color: #f77f00;
+    font-family: cursive;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .form {
+    background-color: #003049;
+    height: 100vh;
+    color: white;
+  }
+  .appBody {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 30%;
+  }
+  .input {
+    margin: 3%;
+  }
+  .submitBt {
+    align-self: center;
+    margin: 3% 0;
+  }
+  .footer {
+    text-align: center;
+  }
+  
