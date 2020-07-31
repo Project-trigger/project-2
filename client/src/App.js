@@ -1,8 +1,15 @@
 import React from "react";
-import Form from "./components/Form";
+import "./App.css";
+import Login from "./components/Login/Login"
+
+
 
 function App() {
-  return <Form />;
+
+  return (
+    <Login />
+
+  );
 }
 
 export default App;
