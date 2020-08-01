@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Menu, MenuItem, SvgIcon, AppBar, Toolbar } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const handleClose = () => {
@@ -32,10 +32,10 @@ const Navbar = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>Random Debate</MenuItem>
-              <MenuItem onClick={handleClose}>Top Debates</MenuItem>
-              <MenuItem onClick={handleClose}>New Debates</MenuItem>
+              <MenuItem>Profile</MenuItem>
+              <Link to="/debate"><MenuItem>Random Debate</MenuItem></Link>
+              <Link to="/trending"><MenuItem>Top Debates</MenuItem></Link>
+              <Link to="/newdebates"><MenuItem>New Debates</MenuItem></Link>
             </Menu>
           </Toolbar>
         </AppBar>
