@@ -35,7 +35,7 @@ const Navbar = () => {
               <MenuItem>Profile</MenuItem>
               <Link to="/debate"><MenuItem>Random Debate</MenuItem></Link>
               <Link to="/trending"><MenuItem>Top Debates</MenuItem></Link>
-              <Link to="/newdebates"><MenuItem>New Debates</MenuItem></Link>
+              <Link to="/newdebates"><MenuItem>Post Debate</MenuItem></Link>
             </Menu>
           </Toolbar>
         </AppBar>
