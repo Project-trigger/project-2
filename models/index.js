@@ -18,10 +18,14 @@ if (config.use_env_variable) {
     config.database,
     config.username,
     config.password,
+<<<<<<< HEAD
     config.email,
     config.user_image,
     config.user_comments,
 
+=======
+    config
+>>>>>>> a4f7018a63d92525dc2eced12dea5b4c97237cb9
   );
 }
 
