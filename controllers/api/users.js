@@ -37,9 +37,9 @@ router.post("/user", function(req, res) {
     password_KEY: req.body.password_KEY,
   })
     // pass the result of our call
-    .then(function(dbUser) {
+    .then(function(User) {
       // log the result to our terminal/bash window
-      console.log(dbUser);
+      console.log(User);
       // redirect
       res.redirect("/");
     });
@@ -86,4 +86,4 @@ router.post("/user", function(req, res) {
 //   }
 // });
 
-// module.exports = router;
+module.exports = router;
