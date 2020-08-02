@@ -6,10 +6,10 @@ USE triggeredDB;
 
 CREATE TABLE users (
   position INT NOT NULL,
-  username VARCHAR(10) NULL,
+  username VARCHAR(30) NULL,
   user_image VARCHAR(200) NULL,
-  email VARCHAR(100) NULL,
-  password_KEY VARCHAR(10) NULL,
+  email VARCHAR(100) NOT NULL,
+  password_KEY VARCHAR(20) NOT NULL,
   votes INT NULL,
   user_comments INT NULL,
   PRIMARY KEY (position)

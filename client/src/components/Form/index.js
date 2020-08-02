@@ -25,6 +25,9 @@ class Form extends Component {
 
     // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
     alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
+
+    // call to the api that crate the user the table
+    
     this.setState({
       firstName: "",
       lastName: ""
