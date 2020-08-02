@@ -1,5 +1,9 @@
 import React from "react";
+import Vote from "../../components/Vote";
+import Argument from "../../components/Argument";
+import Comment from "../../components/Comment";
 import "./Debate.css"
+
 
 const Debate = () => {
 
@@ -12,23 +16,10 @@ const Debate = () => {
       </header>
       
         <div>
-          <form className="appBody">
-            <div className="debate">
-                {/* this will be the question */}
-            </div>
-            <div>
-                {/* arguement A */}
-            </div>
-            <div>
-                {/* arguement B */}
-            </div>
-
-            <div className="voteBt">
-              <input type="submit" name="A" />
-            </div>
-            <div className="voteBt">
-              <input type="submit" name="B" />
-            </div>
+          <form>
+          <Argument />
+          <Vote />
+          <Comment />
           </form>
         </div>
       
