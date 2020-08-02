@@ -1,10 +1,10 @@
-// Burger models
+// Users model
 
 // The burger has a burger_name attribute of type DataTypes.String
-// and a devoured attribute that is false by default
+//the email data can be NULL
 
 module.exports = function(sequelize, DataTypes) {
-  var Users = sequelize.define("Users", {
+  var User = sequelize.define("Users", {
     username: {
       type: DataTypes.STRING,
       allowNull: false
@@ -24,6 +24,6 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return Users;
+  return User;
 };
   
