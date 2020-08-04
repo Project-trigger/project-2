@@ -2,7 +2,7 @@ import React from 'react';
 import { Box } from '@material-ui/core';
 
 
-const Argument = () => {
+const Argument = ({topic, incumbent_body, challenger_body}) => {
   return (
     <React.Fragment>
       <Box>
@@ -21,7 +21,7 @@ const Argument = () => {
               margin: '0, 5',
             }}
           >
-            Who is the better Super hero?
+            {topic}
           </div>
         </Box>
         <Box
@@ -36,7 +36,7 @@ const Argument = () => {
               width: '100%',
             }}
           >
-            Batman has all the gadgets and is a millionaire
+            {incumbent_body}
           </div>
 
           <div
@@ -46,8 +46,7 @@ const Argument = () => {
               width: '100%',
             }}
           >
-            Superman is an alien with super powers. He can shoot rays
-            out of his eyes.
+            {challenger_body}
           </div>
         </Box>
       </Box>

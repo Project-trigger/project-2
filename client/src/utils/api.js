@@ -9,6 +9,9 @@ export default {
   logIn: function () {
     return axios.post("/api/users/login");
   },
+  debates: function () {
+    return axios.get("/api/debates");
+  },
   //   getDogsOfBreed: function(breed) {
   //     return axios.get("https://dog.ceo/api/breed/" + breed + "/images");
   //   },
