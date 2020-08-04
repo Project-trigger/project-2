@@ -3,23 +3,16 @@ import './App.css';
 import Login from './pages/Login/Login';
 import Account from './pages/Account/Account';
 import Debate from './pages/Debate/Debate';
-// import NewDebates from './pages/NewDebates/NewDebates';
+import NewDebates from './pages/NewDebates/NewDebates';
 // import Trending from './pages/Trending/Trending';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
-<<<<<<< HEAD
 import { Container } from "react-bootstrap";
-import { useAuth0 } from "@auth0/auth0-react";
-import { Footer, Loading } from "./components";
-import { Profile, ExternalApi } from "./pages";
-import "./app.css";
+// import { useAuth0 } from "@auth0/auth0-react";
+import "./App.css";
 
 const App = () => {
-  const { isLoading } = useAuth0();
-
-  if (isLoading) {
-    return <Loading />;
-  }
+  
 
   return (
     <div id="app" className="d-flex flex-column h-100">
@@ -27,45 +20,18 @@ const App = () => {
       <Container className="flex-grow-1 mt-5">
         <Switch>
           {/* <Route path="/" exact component={Home} /> */}
-          <Route path="/profile" component={Profile} />
-          <Route path="/external-api" component={ExternalApi} />
-=======
-// import Loginbutton from "./components/Loginbutton";
-// import Logoutbutton from "./components/Logoutbutton";
-// import Signupbutton from "./components/Signupbutton";
-//import API from "./utils/api"
-
-
-function App() {
-  // const handleLogin = ()=>{
-  //   API.logIn().then((res)=>{
-  //     //call set
-  //     //update state or hook with user info
-  //   })
-  // }
-
-  return (
-    <Router>
-      <div>
-        <Navbar />
-        {/* <Navbars /> */}
-        {/* <Logoutbutton />
-        <Loginbutton />
-        <Signupbutton /> */}
-        <main>
->>>>>>> 836223059722fffc102a0deabc96c70157c330b2
           <Route exact path="/" component={Debate} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/account" component={Account} />
           <Route exact path="/debate" component={Debate} />
+          <Route exact path="/newdebates" component={NewDebates} />
         </Switch>
       </Container>
-      <Footer />
+    
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default App;
 
 // function App() {
@@ -87,6 +53,3 @@ export default App;
 // }
 
 // export default App;
-=======
-export default App
->>>>>>> 836223059722fffc102a0deabc96c70157c330b2
