@@ -1,10 +1,8 @@
 // Users model
 
-// The burger has a burger_name attribute of type DataTypes.String
-//the email data can be NULL
 
 module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("Users", {
+  var Users = sequelize.define("Users", {
     username: {
       type: DataTypes.STRING,
       allowNull: false
@@ -17,13 +15,14 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-  }, {
+  }, 
+  {
     classMethods: {
       associate: function(models) {
         User.hasOne(models.Debates);
       }
     }
   });
-  return User;
+  return Users;
 };
   
