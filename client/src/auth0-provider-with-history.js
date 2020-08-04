@@ -14,8 +14,9 @@ const Auth0ProviderWithHistory = ({ children }) => {
 
   return (
     <Auth0Provider
-      domain= "dev-5efj--ws.us.auth0.com"
-      clientId="NxukcrUg0iFQIOhV0e5C2W3hH6Xcxnfg"
+
+      domain={process.env.REACT_APP_AUTH0_DOMAIN}
+      clientId={process.env.REACT_APP_AUTH0_CLIENT_ID}
       redirectUri= "http://localhost:3000/"
       onRedirectCallback={onRedirectCallback}
     >
