@@ -7,10 +7,13 @@ import Debate from "./pages/Debate/Debate";
 // import Trending from './pages/Trending/Trending';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+// import Loginbutton from "./components/Loginbutton";
+// import Logoutbutton from "./components/Logoutbutton";
+// import Signupbutton from "./components/Signupbutton";
 //import API from "./utils/api"
 
+
 function App() {
-  // const [user, setUser] = useState({})
   // const handleLogin = ()=>{
   //   API.logIn().then((res)=>{
   //     //call set
@@ -22,6 +25,10 @@ function App() {
     <Router>
       <div>
         <Navbar />
+        {/* <Navbars /> */}
+        {/* <Logoutbutton />
+        <Loginbutton />
+        <Signupbutton /> */}
         <main>
           <Route exact path="/" component={Debate} />
           <Route exact path="/login" component={Login} />
@@ -35,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
