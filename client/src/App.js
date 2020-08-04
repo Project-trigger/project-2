@@ -17,7 +17,7 @@ const App = () => {
   return (
     <div id="app" className="d-flex flex-column h-100">
       <Navbar />
-      <Container className="flex-grow-1 mt-5">
+      {/* <Container className="flex-grow-1 mt-5"> */}
         <Switch>
           {/* <Route path="/" exact component={Home} /> */}
           <Route exact path="/" component={Debate} />
@@ -26,7 +26,7 @@ const App = () => {
           <Route exact path="/debate" component={Debate} />
           <Route exact path="/newdebates" component={NewDebates} />
         </Switch>
-      </Container>
+      {/* </Container> */}
     
     </div>
   );
