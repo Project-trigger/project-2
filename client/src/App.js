@@ -7,6 +7,7 @@ import Debate from './pages/Debate/Debate';
 // import Trending from './pages/Trending/Trending';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
+<<<<<<< HEAD
 import { Container } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Footer, Loading } from "./components";
@@ -28,6 +29,31 @@ const App = () => {
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/profile" component={Profile} />
           <Route path="/external-api" component={ExternalApi} />
+=======
+// import Loginbutton from "./components/Loginbutton";
+// import Logoutbutton from "./components/Logoutbutton";
+// import Signupbutton from "./components/Signupbutton";
+//import API from "./utils/api"
+
+
+function App() {
+  // const handleLogin = ()=>{
+  //   API.logIn().then((res)=>{
+  //     //call set
+  //     //update state or hook with user info
+  //   })
+  // }
+
+  return (
+    <Router>
+      <div>
+        <Navbar />
+        {/* <Navbars /> */}
+        {/* <Logoutbutton />
+        <Loginbutton />
+        <Signupbutton /> */}
+        <main>
+>>>>>>> 836223059722fffc102a0deabc96c70157c330b2
           <Route exact path="/" component={Debate} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/account" component={Account} />
@@ -39,6 +65,7 @@ const App = () => {
   );
 };
 
+<<<<<<< HEAD
 export default App;
 
 // function App() {
@@ -60,3 +87,6 @@ export default App;
 // }
 
 // export default App;
+=======
+export default App
+>>>>>>> 836223059722fffc102a0deabc96c70157c330b2
