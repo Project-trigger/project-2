@@ -1,9 +1,10 @@
 const router = require("express").Router();
-const burgerRoutes = require("./burger");
-const debateRoutes = require("./debates");
 
-// Book routes
-router.use("/burger", burgerRoutes);
+const usersRoutes = require("./users.js");
+const debateRoutes = require("./debates.js");
+
+// api routes
+router.use("/users", usersRoutes);
 router.use("/debates", debateRoutes);
 
 module.exports = router;
