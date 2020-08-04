@@ -7,6 +7,11 @@ import Debate from './pages/Debate/Debate';
 // import Trending from './pages/Trending/Trending';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+// import Navbars from "./components/Navbars";
+// import Loginbutton from "./components/Loginbutton";
+// import Logoutbutton from "./components/Logoutbutton";
+// import Signupbutton from "./components/Signupbutton";
+
 
 
 function App() {
@@ -14,6 +19,10 @@ function App() {
     <Router>
       <div>
         <Navbar />
+        {/* <Navbars /> */}
+        {/* <Logoutbutton />
+        <Loginbutton />
+        <Signupbutton /> */}
         <main>
           <Route exact path="/" component={Debate} />
           <Route exact path="/login" component={Login} />
@@ -27,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
