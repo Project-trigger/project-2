@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Box } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import "./Vote.css"
 
 const Vote = () => {
