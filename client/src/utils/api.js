@@ -10,7 +10,7 @@ export default {
     return axios.post("/api/users/login");
   },
   debates: function () {
-    return axios.get("/api/debates");
+    return axios.get("/api/debates/test");
   },
   //   getDogsOfBreed: function(breed) {
   //     return axios.get("https://dog.ceo/api/breed/" + breed + "/images");
