@@ -1,12 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Vote from "../../components/Vote";
 import Argument from "../../components/Argument";
 import Comment from "../../components/Comment";
 import API from "../../utils/api";
 import "./Debate.css";
-
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Debate = () => {
+
   const [next, setNext] = useState(0)
   const [results, setResults] = useState([])
 const [topic, setTopic] = useState ("")
@@ -44,18 +45,20 @@ const handlerNextClick = () => {
       <header className="appHeader">
         <h1>Triggered</h1>
       </header>
+
       
         <div>
           <form>
           <Argument handlerNextClick={handlerNextClick} topic={topic} incumbent_body={incumbentbody} challenger_body={challengerbody}/>
+
           <Vote />
           <Comment />
-          </form>
-        </div>
-      
-      
+        </form>
       </div>
-    
+
+
+    </div>
+
   );
 };
 

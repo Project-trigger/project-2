@@ -12,26 +12,26 @@ import { orange } from "@material-ui/core/colors";
 
 const Login = () => {
   return (
-    <div>  
-       <div className="form">
+    <div>
+      <div className="form">
 
-     <header className="appHeader">
-      <h1>Triggered!!!</h1> <SmsSharpIcon />
-     </header>
+        <header className="appHeader">
+          <h1>Triggered!!!</h1> <SmsSharpIcon />
+        </header>
 
-    
-     <form className="appBody">
-    <div className="loginbtn" style={{color: orange}}>
-    <Loginbutton />
-    </div>
-    <div className="signupbtn">
-    <Signupbutton />
-    </div>
-    <div className="logoutbtn">
-    <Logoutbutton />
-    </div>
-    </form>
-    </div>
+
+        <form className="appBody">
+          <div className="loginbtn" style={{ color: orange }}>
+            <Loginbutton />
+          </div>
+          <div className="signupbtn">
+            <Signupbutton />
+          </div>
+          <div className="logoutbtn">
+            <Logoutbutton />
+          </div>
+        </form>
+      </div>
     </div>
 
   );
@@ -48,7 +48,7 @@ export default Login;
 
   //     <div>
   //       <form className="appBody">
-         
+
 
   //         <div className="input">
   //           <label>Username:</label>

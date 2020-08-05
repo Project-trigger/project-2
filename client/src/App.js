@@ -7,27 +7,32 @@ import NewDebates from './pages/NewDebates/NewDebates';
 // import Trending from './pages/Trending/Trending';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Navbars from "./components/Navbars";
+import Profile from "./components/Profile";
+
 import { Container } from "react-bootstrap";
 // import { useAuth0 } from "@auth0/auth0-react";
 import "./App.css";
 
 const App = () => {
-  
+
 
   return (
     <div id="app" className="d-flex flex-column h-100">
       <Navbar />
+      <Navbars />
       {/* <Container className="flex-grow-1 mt-5"> */}
-        <Switch>
-          {/* <Route path="/" exact component={Home} /> */}
-          <Route exact path="/" component={Debate} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/account" component={Account} />
-          <Route exact path="/debate" component={Debate} />
-          <Route exact path="/newdebates" component={NewDebates} />
-        </Switch>
+      <Switch>
+        <Route exact path="/profile" component={Profile} />
+        {/* <Route path="/" exact component={Home} /> */}
+        <Route exact path="/" component={Debate} />
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/account" component={Account} />
+        <Route exact path="/debate" component={Debate} />
+        <Route exact path="/newdebates" component={NewDebates} />
+      </Switch>
       {/* </Container> */}
-    
+
     </div>
   );
 };

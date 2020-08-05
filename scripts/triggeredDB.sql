@@ -14,16 +14,18 @@ CREATE TABLE users (
 
 CREATE TABLE debates (
   id INT NOT NULL AUTO_INCREMENT,
+  user_id VARCHAR(40) NOT NULL
   incumbent_username VARCHAR(20) NOT NULL,
   challenger_username VARCHAR(20) NULL,
   topic VARCHAR(100) NOT NULL,
   incumbent_body VARCHAR (280) NOT NULL,
-  challenger_body VARCHAR (280) NULL,
+  challenger_body VARCHAR (280) NOT NULL,
   incumbent_votes INT NULL,
   challenger_votes INT NULL,
   voter_usernames VARCHAR (20) NULL,
   comments VARCHAR (280) NULL,
-  created_at DATETIME NOT NULL,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME NOT NULL,
   PRIMARY KEY (id)
 );
 

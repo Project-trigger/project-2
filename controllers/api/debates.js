@@ -3,9 +3,10 @@ var db = require("../../models");
 
 // create model for arguments
 // change line 6 to pull from database
-router.get("/", function(req, res) {
+router.get("/test", function (req, res) {
   // res.json(debates);
   db.Debates.findAll({
+
     }).then(function (dbDebate) {
       //logic if no user found
       const debates = []
@@ -23,5 +24,14 @@ router.get("/", function(req, res) {
       res.json(debates);
     });
 });
+
+// router.post("/postChallengerDebates", function (req, res) {
+//   console.log("hit post debates route");
+//   debates.
+//   debates.topic = dbDebate[i].topic;
+//   debates.challenger_body = dbDebate[i].challenger_body;
+//   res.json(debates);
+// });
+
 
 module.exports = router;
