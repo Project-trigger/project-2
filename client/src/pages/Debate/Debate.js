@@ -7,20 +7,38 @@ import "./Debate.css";
 
 
 const Debate = () => {
+  const [next, setNext] = useState(0)
+  const [results, setResults] = useState([])
 const [topic, setTopic] = useState ("")
 const [incumbentbody, setIncumbentbody] = useState ("") 
 const [challengerbody, setChallengerbody] = useState ("") 
 
 useEffect(()=>{
   API.debates()
-  .then(results =>{
-    console.log(results.data.topic)
-    setTopic(results.data.topic)
-    setIncumbentbody(results.data.incumbent_body)
-    setChallengerbody(results.data.challenger_body)
+  .then(res =>{
+    console.log(res.data)
+    setResults(res.data)
+    changeContent(res.data[0], 0);
   })
   
-})
+},[]
+)
+const changeContent =(data, index) => {
+  
+  setTopic(data.topic)
+  setIncumbentbody(data.incumbent_body)
+  setChallengerbody(data.challenger_body)
+  const nextData = index+1
+  setNext(nextData)
+}
+const handlerNextClick = () => {
+  let index=next;
+  if(next>=results.length) {
+    index=0
+  }
+  changeContent(results[index], index)  
+}
+
   return (
     <div className="form">
       <header className="appHeader">
@@ -29,7 +47,7 @@ useEffect(()=>{
       
         <div>
           <form>
-          <Argument topic={topic} incumbent_body={incumbentbody} challenger_body={challengerbody}/>
+          <Argument handlerNextClick={handlerNextClick} topic={topic} incumbent_body={incumbentbody} challenger_body={challengerbody}/>
           <Vote />
           <Comment />
           </form>

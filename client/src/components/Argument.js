@@ -1,10 +1,13 @@
 import React from 'react';
-import { Box } from '@material-ui/core';
+import { Box, Button } from '@material-ui/core';
+import { Next } from 'react-bootstrap/esm/PageItem';
 
 
-const Argument = ({topic, incumbent_body, challenger_body}) => {
+
+const Argument = ({handlerNextClick, topic, incumbent_body, challenger_body}) => {
   return (
     <React.Fragment>
+    <Button onClick = {handlerNextClick} style={{color: "white", float: "right"}}>Next</Button>
       <Box>
         <Box
           display="flex"
@@ -50,7 +53,10 @@ const Argument = ({topic, incumbent_body, challenger_body}) => {
           </div>
         </Box>
       </Box>
+      
     </React.Fragment>
+  
+  
   );
 };
 
