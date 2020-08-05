@@ -1,19 +1,28 @@
 const router = require("express").Router();
 var db = require("../../models");
-let debates = { topic: "villains", incumbent_body: "joker", challenger_body: "lex luther" };
+
 // create model for arguments
 // change line 6 to pull from database
 router.get("/test", function (req, res) {
   // res.json(debates);
   db.Debates.findAll({
-  }).then(function (dbDebate) {
-    //logic if no user found
-    console.log(dbDebate[0].topic);
-    debates.topic = dbDebate[1].topic;
-    debates.incumbent_body = dbDebate[1].incumbent_body;
-    debates.challenger_body = dbDebate[1].challenger_body;
-    res.json(debates);
-  });
+
+    }).then(function (dbDebate) {
+      //logic if no user found
+      const debates = []
+      console.log(dbDebate[0].topic)
+      for (let index = 0; index < dbDebate.length; index++) {
+        const element = dbDebate[index];
+        console.log(element.topic);
+      let debate = {topic: "villains", incumbent_body: "joker", challenger_body: "lex luther"};
+      debate.topic=element.topic;
+      debate.incumbent_body=element.incumbent_body;
+      debate.challenger_body=element.challenger_body;
+      debates.push(debate)
+      }
+      
+      res.json(debates);
+    });
 });
 
 // router.post("/postChallengerDebates", function (req, res) {

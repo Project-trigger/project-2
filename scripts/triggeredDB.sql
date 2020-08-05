@@ -40,7 +40,9 @@ VALUES ("Batman", "batcave@gmail.com", "123");
 
 INSERT INTO debates (incumbent_username, topic, incumbent_body, challenger_body, createdAt, updatedAt)
 VALUES ("Cranekick50", "who is the better superhero???", "batman has lots of gadgets", "superman has super powers", "2020-01-01 12:00:00", "2020-01-01 12:00:00");
+
 INSERT INTO debates (incumbent_username, topic, incumbent_body, challenger_body, createdAt, updatedAt)
 VALUES ("Batman", "Which gadget should I use?", "batrang?", "grappling hook?", "2020-01-02 14:00:00", "2020-01-02 14:00:00");
+
 INSERT INTO debates (incumbent_username, topic, incumbent_body, challenger_body, createdAt, updatedAt)
 VALUES ("Vader911", "who should I put in carbonite first?", "Luke Skywalker", "Han Solo", "2020-01-03 15:00:00", "2020-01-03 15:00:00");

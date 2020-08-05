@@ -7,30 +7,50 @@ import "./Debate.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Debate = () => {
-  const [topic, setTopic] = useState("")
-  const [incumbentbody, setIncumbentbody] = useState("")
-  const [challengerbody, setChallengerbody] = useState("")
-  const { isAuthenticated, user } = useAuth0();
 
-  useEffect(() => {
-    API.debates()
-      .then(results => {
-        console.log(results.data.topic)
-        setTopic(results.data.topic)
-        setIncumbentbody(results.data.incumbent_body)
-        setChallengerbody(results.data.challenger_body)
-      })
+  const [next, setNext] = useState(0)
+  const [results, setResults] = useState([])
+const [topic, setTopic] = useState ("")
+const [incumbentbody, setIncumbentbody] = useState ("") 
+const [challengerbody, setChallengerbody] = useState ("") 
 
+useEffect(()=>{
+  API.debates()
+  .then(res =>{
+    console.log(res.data)
+    setResults(res.data)
+    changeContent(res.data[0], 0);
   })
+  
+},[]
+)
+const changeContent =(data, index) => {
+  
+  setTopic(data.topic)
+  setIncumbentbody(data.incumbent_body)
+  setChallengerbody(data.challenger_body)
+  const nextData = index+1
+  setNext(nextData)
+}
+const handlerNextClick = () => {
+  let index=next;
+  if(next>=results.length) {
+    index=0
+  }
+  changeContent(results[index], index)  
+}
+
   return (
     <div className="form">
       <header className="appHeader">
         <h1>Triggered</h1>
       </header>
-      {isAuthenticated ? <> Hi {user.name} </> : null}
-      <div>
-        <form>
-          <Argument topic={topic} incumbent_body={incumbentbody} challenger_body={challengerbody} />
+
+      
+        <div>
+          <form>
+          <Argument handlerNextClick={handlerNextClick} topic={topic} incumbent_body={incumbentbody} challenger_body={challengerbody}/>
+
           <Vote />
           <Comment />
         </form>
