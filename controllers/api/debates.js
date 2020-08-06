@@ -1,14 +1,10 @@
 const router = require("express").Router();
 var db = require("../../models");
 
-// create model for arguments
-// change line 6 to pull from database
-router.get("/test", function (req, res) {
-  // res.json(debates);
+// this function grabs debates from the debates table.
+router.get("/test", function(req, res) {
   db.Debates.findAll({
-
     }).then(function (dbDebate) {
-      //logic if no user found
       const debates = []
       console.log(dbDebate[0].topic)
       for (let index = 0; index < dbDebate.length; index++) {
@@ -25,13 +21,11 @@ router.get("/test", function (req, res) {
     });
 });
 
-// router.post("/postChallengerDebates", function (req, res) {
-//   console.log("hit post debates route");
-//   debates.
-//   debates.topic = dbDebate[i].topic;
-//   debates.challenger_body = dbDebate[i].challenger_body;
-//   res.json(debates);
-// });
-
+router.post("/newdebates", function(req, res) {
+  db.Debates.findAll({
+  }).then(function (dbDebate) {
+  console.log(dbDebate)
+})
+})
 
 module.exports = router;
