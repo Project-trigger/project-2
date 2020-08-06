@@ -9,8 +9,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Navbars from "./components/Navbars";
 import Profile from "./components/Profile";
-
-import { Container } from "react-bootstrap";
 // import { useAuth0 } from "@auth0/auth0-react";
 import "./App.css";
 
@@ -20,7 +18,7 @@ const App = () => {
   return (
     <div id="app" className="d-flex flex-column h-100">
       <Navbar />
-      <Navbars />
+      {/* <Navbars /> */}
       {/* <Container className="flex-grow-1 mt-5"> */}
       <Switch>
         <Route exact path="/profile" component={Profile} />

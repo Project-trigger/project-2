@@ -1,11 +1,12 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { MenuItem } from "@material-ui/core";
 
 const LogoutButton = () => {
   const { logout } = useAuth0();
   return (
-    <Button
+    <Link
       onClick={() =>
         logout({
           returnTo: window.location.origin,
@@ -14,8 +15,8 @@ const LogoutButton = () => {
       variant="danger"
       className="btn-margin"
     >
-      Log Out
-    </Button>
+      <MenuItem>Log Out</MenuItem>
+    </Link>
   );
 };
 
