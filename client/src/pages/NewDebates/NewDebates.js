@@ -6,17 +6,39 @@ import API from "../../utils/api";
 
 const NewPost = () => {
 
-  useEffect(()=>{
-    API.newdebates()
-    .then((res, req) =>{
-      console.log(res)
-      // setResults(res.data)
-      // changeContent(res.data[0], 0);
-    })
-    
-  },[]
-  )
+//   // const [next, setNext] = useState(0)
+//   const [results, setResults] = useState([])
+// const [topic, createTopic] = useState ("")
+// const [incumbentbody, createIncumbentbody] = useState ("") 
+// const [challengerbody, createChallengerbody] = useState ("") 
 
+
+//   useEffect(()=>{
+//     API.debates()
+//     .then(res =>{
+//       console.log(res.data)
+//       setResults(res.data)
+//       addContent(res.data);
+//     })
+    
+//   },[]
+//   )
+//   const addContent =(data, index) => {
+  
+//     createTopic(data.topic)
+//     createIncumbentbody(data.incumbent_body)
+//     createChallengerbody(data.challenger_body)
+    
+//   }
+
+  // function createDebate(debateData) {
+  //   var newDebate = $("");
+  //   newDebate.data("debates", debateData);
+  //   newDebate.append("" + debateData.topic + "")
+  //   newDebate.append("" + debateData.incumbent + "")
+  //   newDebate.append("" + debateData.challenger + "")
+  
+  // }
 
   return (
     <div className="form">

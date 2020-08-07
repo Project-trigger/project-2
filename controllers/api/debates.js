@@ -5,22 +5,26 @@ var db = require("../../models");
 router.get("/test", function (req, res) {
   db.Debates.findAll({}).then(function (dbDebate) {
     const debates = [];
-    console.log(dbDebate[0].topic);
-    for (let index = 0; index < dbDebate.length; index++) {
-      const element = dbDebate[index];
-      console.log(element.topic);
-      let debate = {
-        topic: "villains",
-        incumbent_body: "joker",
-        challenger_body: "lex luther",
-      };
-      debate.topic = element.topic;
-      debate.incumbent_body = element.incumbent_body;
-      debate.challenger_body = element.challenger_body;
-      debates.push(debate);
-    }
+    // console.log(dbDebate[0].topic);
+    if (dbDebate[0] && dbDebate[0].topic ) {
+      for (let index = 0; index < dbDebate.length; index++) {
+        const element = dbDebate[index];
+        console.log(element.topic);
+        let debate = {
+          topic: "villains",
+          incumbent_body: "joker",
+          challenger_body: "lex luther",
+        };
+        debate.topic = element.topic;
+        debate.incumbent_body = element.incumbent_body;
+        debate.challenger_body = element.challenger_body;
+        debates.push(debate);
+      }
 
-    res.json(debates);
+      res.json(debates);
+    } else {
+      res.send("Topic not found");
+    }
   });
 });
 
