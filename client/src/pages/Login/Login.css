@@ -5,9 +5,10 @@
   text-align: center;
 }
 .form {
-  background-color: #003049;
+  /* background-color: #003049; */
+  background-color: white;
   height: 100vh;
-  color: white;
+  color: black;
 }
 .appBody {
   display: flex;

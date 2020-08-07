@@ -34,7 +34,7 @@ const Navbar = () => {
     <div>
       <AppBar position="static">
         <Toolbar
-          style={{ backgroundColor: "#f77f00" }}
+          style={{ backgroundColor: "#003049" }}
           variant="dense"
         >
           <Button
