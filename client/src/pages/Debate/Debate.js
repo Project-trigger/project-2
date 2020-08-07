@@ -32,6 +32,7 @@ const changeContent =(data, index) => {
   const nextData = index+1
   setNext(nextData)
 }
+
 const handlerNextClick = () => {
   let index=next;
   if(next>=results.length) {
