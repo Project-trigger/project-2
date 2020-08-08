@@ -17,6 +17,7 @@ import Avatar from "./Avatar";
 import Logo from "./Logo";
 
 
+
 const Navbar = () => {
   const handleClose = () => {
     setAnchorEl(null);
@@ -39,8 +40,8 @@ const Navbar = () => {
         <Toolbar
           style={{ backgroundColor: "#003049" }}
           variant="dense"
-        > 
-        <Logo />
+        >
+          <Logo />
           <Avatar />
           <Button
             aria-controls="simple-menu"
