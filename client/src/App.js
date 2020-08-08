@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
 
+
 import { Container } from "react-bootstrap";
 // import { useAuth0 } from "@auth0/auth0-react";
 import "./App.css";

@@ -2,6 +2,10 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 import { deepOrange, deepPurple } from '@material-ui/core/colors';
+import { NavLink as RouterNavLink } from "react-router-dom";
+import { Nav } from "react-bootstrap";
+
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,9 +25,13 @@ export default function LetterAvatars() {
 
     return (
         <div className={classes.root}>
-            <Avatar>H</Avatar>
-            <Avatar className={classes.orange}>N</Avatar>
-            <Avatar className={classes.purple}>OP</Avatar>
+           
+            <Nav.Link
+              as={RouterNavLink}
+              to="/profile"
+              exact
+              activeClassName="router-link-exact-active"
+            ><Avatar className={classes.orange}></Avatar></Nav.Link> 
         </div>
     );
 }

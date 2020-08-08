@@ -14,7 +14,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./Logoutbutton";
 import LoginButton from "./Loginbutton";
 import Avatar from "./Avatar";
-import BluechatbgFinal from "../bluechatbgFinal.png"
+import Logo from "./Logo";
 
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const Navbar = () => {
           style={{ backgroundColor: "#003049" }}
           variant="dense"
         > 
-        <img src ={BluechatbgFinal} alt="A" />
+        <Logo />
           <Avatar />
           <Button
             aria-controls="simple-menu"
