@@ -13,6 +13,9 @@ import { Nav } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./Logoutbutton";
 import LoginButton from "./Loginbutton";
+import Avatar from "./Avatar";
+import BluechatbgFinal from "../bluechatbgFinal.png"
+
 
 const Navbar = () => {
   const handleClose = () => {
@@ -36,7 +39,9 @@ const Navbar = () => {
         <Toolbar
           style={{ backgroundColor: "#003049" }}
           variant="dense"
-        >
+        > 
+        <img src ={BluechatbgFinal} alt="A" />
+          <Avatar />
           <Button
             aria-controls="simple-menu"
             aria-haspopup="true"
@@ -76,8 +81,8 @@ const Navbar = () => {
                   <LogoutButton />{" "}
                 </>
               ) : (
-                <LoginButton />
-              )}{" "}
+                  <LoginButton />
+                )}{" "}
             </Link>
           </Menu>
           <div>{authMessage}</div>

@@ -4,10 +4,10 @@ import { Next } from 'react-bootstrap/esm/PageItem';
 
 
 
-const Argument = ({handlerNextClick, topic, incumbent_body, challenger_body}) => {
+const Argument = ({ handlerNextClick, topic, incumbent_body, challenger_body }) => {
   return (
     <React.Fragment>
-    <Button onClick = {handlerNextClick} style={{color: "white", float: "right"}}>Next</Button>
+      <Button onClick={handlerNextClick} style={{ color: "white", float: "right" }}>Next</Button>
       <Box>
         <Box
           display="flex"
@@ -18,7 +18,7 @@ const Argument = ({handlerNextClick, topic, incumbent_body, challenger_body}) =>
         >
           <div
             style={{
-              backgroundColor: '#f2cc8f',
+              backgroundColor: '#F77F00',
               color: 'black',
               width: '95%',
               margin: '0, 5',
@@ -34,7 +34,7 @@ const Argument = ({handlerNextClick, topic, incumbent_body, challenger_body}) =>
         >
           <div
             style={{
-              border: 'solid #d62828 5px',
+              border: 'solid #F77F00 5px',
               margin: '10px',
               width: '100%',
             }}
@@ -53,10 +53,10 @@ const Argument = ({handlerNextClick, topic, incumbent_body, challenger_body}) =>
           </div>
         </Box>
       </Box>
-      
+
     </React.Fragment>
-  
-  
+
+
   );
 };
 
