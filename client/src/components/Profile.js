@@ -1,7 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Highlight from "./Highlight";
+import Loading from "./Loading";
 
-import { useAuth0 } from "@auth0/auth0-react";
+
+import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
 
 const Profile = () => {
   const { user } = useAuth0();
@@ -23,9 +26,12 @@ const Profile = () => {
         </Col>
       </Row>
       <Row>
+        <Highlight>{JSON.stringify(user, null, 2)}</Highlight>
       </Row>
     </Container>
   );
 };
 
-export default Profile;
+export default withAuthenticationRequired(Profile, {
+  onRedirecting: () => <Loading />,
+});

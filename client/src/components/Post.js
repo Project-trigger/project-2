@@ -1,93 +1,57 @@
-import React from "react";
-import { Box, Button } from "@material-ui/core";
-import { useAuth0 } from "@auth0/auth0-react";
+import React, { Component } from 'react';
 
-const { isAuthenticated, user } = useAuth0();
 
-const Post = ({
-  debatePostClick,
-  user_id,
-  incumbent_username,
-  challenger_username,
-  topic,
-  incumbent_body,
-  challenger_body,
-  createdAt,
-  updatedAt,
-}) => {
-  let user_id = "";
-  if (isAuthenticated) {
-    user_id = `${user.user_id}`;
-  }
-  let { incumbent_username } = "";
-  if (isAuthenticated) {
-    incumbent_username = `${user.name}`;
+class Post extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      topic: '',
+      incumbent_body: '',
+      challenger_body: ''
+    }
   }
 
-  return (
-    <React.Fragment>
-      <Box>
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          textAlign="center"
-          style={{ marginTop: "50px", fontSize: "25px" }}
-        >
-          <div
-            style={{
-              backgroundColor: "#f2cc8f",
-              color: "black",
-              width: "95%",
-              margin: "0, 5",
-            }}
-          >
-            <label>
-              <div>Topic:</div>
-              <textarea type="text" id={topic} />
-            </label>
-          </div>
-        </Box>
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-        >
-          <div
-            style={{
-              border: "solid #d62828 5px",
-              margin: "10px",
-              width: "100%",
-            }}
-          >
-            <label>
-              Side A:
-              <textarea type="text" id={incumbent_body} />
-            </label>
-          </div>
+  ChangeHandler = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
 
-          <div
-            style={{
-              border: "solid #fcbf49 5px",
-              margin: "10px",
-              width: "100%",
-            }}
-          >
-            <label>
-              Side B:
-              <textarea type="text" id={challenger_body} />
-            </label>
+  submitHandler = e => {
+    e.preventDefault(
+      console.log(this.state)
+    )
+  }
+
+  render() {
+    return (
+      <div>
+        <form onSubmit={this.submitHandler}>
+          <div>
+            <input type="text"
+              name="topic"
+              value={this.props.topic}
+              onChange={this.ChangeHandler}
+            />
           </div>
-        </Box>
-      </Box>
-      <Button
-        onClick={debatePostClick}
-        style={{ color: "black", float: "left" }}
-      >
-        Submit
-      </Button>
-    </React.Fragment>
-  );
-};
+          <div>
+            <input type="text"
+              name="incumbent_body"
+              value={this.props.incumbent_body}
+              onChange={this.ChangeHandler}
+            />
+          </div>
+          <div>
+            <input type="text"
+              name="challenger_body"
+              value={this.props.challenger_body}
+              onChange={this.ChangeHandler}
+            />
+          </div>
+          <button type="submit"> Submit</button>
+        </form>
+      </div>
+    )
+  }
+}
 
 export default Post;

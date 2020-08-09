@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Vote from "../../components/Vote";
-import Argument from "../../components/Argument";
+import Post from "../../components/Post";
 import Comment from "../../components/Comment";
 import API from "../../utils/api";
 import "./Debate.css";
@@ -50,7 +50,7 @@ const handlerNextClick = () => {
       
         <div>
           <form>
-          <Argument handlerNextClick={handlerNextClick} topic={topic} incumbent_body={incumbentbody} challenger_body={challengerbody}/>
+          <Post handlerNextClick={handlerNextClick} topic={topic} incumbent_body={incumbentbody} challenger_body={challengerbody}/>
 
           <Vote />
           <Comment />
