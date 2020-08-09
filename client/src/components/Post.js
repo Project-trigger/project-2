@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Button } from "@material-ui/core";
 import { useAuth0 } from "@auth0/auth0-react";
 
-const { isAuthenticated, user } = useAuth0();
+// const { isAuthenticated, user } = useAuth0();
 
 const Post = ({
   debatePostClick,
@@ -15,14 +15,17 @@ const Post = ({
   createdAt,
   updatedAt,
 }) => {
-  let user_id = "";
-  if (isAuthenticated) {
-    user_id = `${user.user_id}`;
-  }
-  let { incumbent_username } = "";
-  if (isAuthenticated) {
-    incumbent_username = `${user.name}`;
-  }
+  // function Userid ({user_id}) {
+  //   const [state, setState] = useState();
+  // }
+  // let user_id = "";
+  // if (isAuthenticated) {
+  //   user_id = `${user.user_id}`;
+  // }
+  // let { incumbent_username } = "";
+  // if (isAuthenticated) {
+  //   incumbent_username = `${user.name}`;
+  // }
 
   return (
     <React.Fragment>
