@@ -13,7 +13,7 @@ export default {
     return axios.get("/api/debates/test");
   },
   newdebates: function() {
-    return axios.post("/api/debates/newdebate");
+    return axios.post("/api/debates/newdebates");
   },
   //   getDogsOfBreed: function(breed) {
   //     return axios.get("https://dog.ceo/api/breed/" + breed + "/images");

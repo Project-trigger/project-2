@@ -60,19 +60,12 @@ const Navbar = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <Nav.Link
-              as={RouterNavLink}
-              to="/profile"
-              exact
-              activeClassName="router-link-exact-active"
-            >
-              Profile
-            </Nav.Link>
+            
             <Link to="/debate">
               <MenuItem>View Debates</MenuItem>
             </Link>
             <Link to="/newdebates">
-              <MenuItem>Post Debate</MenuItem>
+              <MenuItem>New Debate</MenuItem>
             </Link>
             <Link to="/">
               {" "}

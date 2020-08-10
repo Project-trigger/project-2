@@ -21,7 +21,7 @@ const NewPost = () => {
   return (
     <div className="form">
       <header className="appHeader">
-        <h1>Triggered!!!</h1>
+        <h1>Triggered</h1>
       </header>
       
         <div>

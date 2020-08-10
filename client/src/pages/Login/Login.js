@@ -16,7 +16,7 @@ const Login = () => {
       <div className="form">
 
         <header className="appHeader">
-          <h1>Triggered!!!</h1> <SmsSharpIcon />
+          <h1>Triggered</h1> <SmsSharpIcon />
         </header>
 
 
