@@ -1,33 +1,48 @@
 import React, { useState, useEffect } from "react";
 import Post from "../../components/Post";
 import API from "../../utils/api";
-
+import { useAuth0 } from "@auth0/auth0-react";
 
 
 const NewPost = () => {
+  const { user } = useAuth0();
+  const { picture, email, username } = user;
 
-//   // const [next, setNext] = useState(0)
-//   const [results, setResults] = useState([])
-// const [topic, createTopic] = useState ("")
-// const [incumbentbody, createIncumbentbody] = useState ("") 
-// const [challengerbody, createChallengerbody] = useState ("") 
-
-
-//   useEffect(()=>{
-//     API.debates()
-//     .then(res =>{
-//       console.log(res.data)
-//       setResults(res.data)
-//       addContent(res.data);
-//     })
-    
-//   },[]
-//   )
-//   const addContent =(data, index) => {
+  const [state, setState] = useState({
+    topic: "",
+    arguement: "",
+    counterArguement: ""
+  })
   
-//     createTopic(data.topic)
-//     createIncumbentbody(data.incumbent_body)
-//     createChallengerbody(data.challenger_body)
+  const handleInputChange= event => {
+    const {name, value}= event.target
+    setState({
+      ...state,
+      [name]:value
+    })
+    console.log(value);
+  }
+
+
+  const handleSave= event => {
+console.log(state, user)
+        const newdebates = {
+          topic: state.topic,
+          incumbent_body: state.arguement,
+          challenger_body: state.counterArguement,
+          username: user.name,
+          email: user.email
+        }
+        API.newdebates(newdebates)
+  }
+  useEffect(()=>{
+    API.newdebates()
+    .then((res, req) =>{
+      console.log(res)
+      // setResults(res.data)
+      // changeContent(res.data[0], 0);
+    })
+
     
 //   }
 
@@ -43,17 +58,17 @@ const NewPost = () => {
   return (
     <div className="form">
       <header className="appHeader">
-        <h1>Triggered!!!</h1>
+        <h1>Triggered</h1>
       </header>
       
         <div>
           <form>
-          <Post />
+          <Post handleInputChange={handleInputChange} topic={state.topic} arguement={state.arguement} counterArguement={state.counterArguement} />
           </form>
         </div>
       
         <div className="submitBt">
-              <input type="submit" name="Submit" style={{justifyContent: "center"}} />
+              <input  onClick={handleSave} type="submit" name="Submit" style={{justifyContent: "center"}} />
             </div>
       </div>
     

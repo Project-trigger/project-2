@@ -1,13 +1,13 @@
 .appHeader {
-    color: #f77f00;
-    font-family: cursive;
+    color: black;
+    font-family: 'Audiowide', cursive;    
     font-size: 1.5em;
     text-align: center;
   }
   .form {
-    background-color: #003049;
+    background-color: #f1f0ee;
     height: 100vh;
-    color: white;
+    color: black;
   }
   .appBody {
     display: flex;

@@ -3,8 +3,10 @@
 module.exports = function (sequelize, DataTypes) {
   var Debates = sequelize.define("Debates", {
     user_id: {
-      type: DataTypes.STRING,
-      allowNull: false,
+
+     type: DataTypes.INTEGER,
+     allowNull: false
+
     },
     incumbent_username: {
       type: DataTypes.STRING,

@@ -7,7 +7,7 @@ const Vote = () => {
     <div className="votebtn">
        
         <div>
-          <Button variant="contained" style={{backgroundColor: "#d62828"}}
+          <Button variant="contained" style={{backgroundColor: "#f77f00"}}
             onClick={() => {
               alert('clicked');
             }}

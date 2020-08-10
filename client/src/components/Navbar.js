@@ -13,6 +13,10 @@ import { Nav } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
 import LogoutButton from "./Logoutbutton";
 import LoginButton from "./Loginbutton";
+import Avatar from "./Avatar";
+import Logo from "./Logo";
+
+
 
 const Navbar = () => {
   const handleClose = () => {
@@ -34,9 +38,11 @@ const Navbar = () => {
     <div>
       <AppBar position="static">
         <Toolbar
-          style={{ backgroundColor: "#f77f00" }}
+          style={{ backgroundColor: "#003049" }}
           variant="dense"
         >
+          <Logo />
+          <Avatar />
           <Button
             aria-controls="simple-menu"
             aria-haspopup="true"
@@ -54,19 +60,12 @@ const Navbar = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <Nav.Link
-              as={RouterNavLink}
-              to="/profile"
-              exact
-              activeClassName="router-link-exact-active"
-            >
-              Profile
-            </Nav.Link>
+            
             <Link to="/debate">
               <MenuItem>View Debates</MenuItem>
             </Link>
             <Link to="/newdebates">
-              <MenuItem>Post Debate</MenuItem>
+              <MenuItem>New Debate</MenuItem>
             </Link>
             <Link to="/">
               {" "}
@@ -74,8 +73,8 @@ const Navbar = () => {
                   <LogoutButton />{" "}
                 </>
               ) : (
-                <LoginButton />
-              )}{" "}
+                  <LoginButton />
+                )}{" "}
             </Link>
           </Menu>
           <div>{authMessage}</div>

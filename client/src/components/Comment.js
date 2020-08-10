@@ -8,15 +8,15 @@ const Comment = () => {
       flexDirection="row"
       justifyContent="center"
       textAlign="center"
-      
+
     >
       <TextField
-          id="filled-multiline-static"
-          label="Comments"
-          multiline
-          rows={4}
-          defaultValue="Leave a comment"
-          variant="filled"
+        id="filled-multiline-static"
+        label="Comments"
+        multiline
+        rows={4}
+        defaultValue=""
+        variant="filled"
         style={{
           backgroundColor: 'white',
           width: '95%',

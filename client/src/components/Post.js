@@ -1,95 +1,82 @@
-import React, { useState } from "react";
-import { Box, Button } from "@material-ui/core";
-import { useAuth0 } from "@auth0/auth0-react";
 
-// const { isAuthenticated, user } = useAuth0();
+import React from 'react';
+import { TextField, Box } from '@material-ui/core';
+import { Container } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
+import { orange } from '@material-ui/core/colors';
 
-const Post = ({
-  debatePostClick,
-  user_id,
-  incumbent_username,
-  challenger_username,
-  topic,
-  incumbent_body,
-  challenger_body,
-  createdAt,
-  updatedAt,
-}) => {
-  // function Userid ({user_id}) {
-  //   const [state, setState] = useState();
-  // }
-  // let user_id = "";
-  // if (isAuthenticated) {
-  //   user_id = `${user.user_id}`;
-  // }
-  // let { incumbent_username } = "";
-  // if (isAuthenticated) {
-  //   incumbent_username = `${user.name}`;
-  // }
 
+
+const Post = (props) => {
   return (
-    <React.Fragment>
-      <Box>
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-          textAlign="center"
-          style={{ marginTop: "50px", fontSize: "25px" }}
-        >
-          <div
-            style={{
-              backgroundColor: "#f2cc8f",
-              color: "black",
-              width: "95%",
-              margin: "0, 5",
-            }}
-          >
-            <label>
-              <div>Topic:</div>
-              <textarea type="text" id={topic} />
-            </label>
-          </div>
-        </Box>
-        <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="center"
-        >
-          <div
-            style={{
-              border: "solid #d62828 5px",
-              margin: "10px",
-              width: "100%",
-            }}
-          >
-            <label>
-              Side A:
-              <textarea type="text" id={incumbent_body} />
-            </label>
-          </div>
+    <Container fixed>
+    <Box display="flex"
+  justifyContent="center"
+  alignItems="center">
+    <TextField
+        id="filled-multiline-static"
+        label="Topic"
+        multiline
+        rows={4}
+        defaultValue=""
+        variant="filled"
+        style={{
+          backgroundColor: 'white',
+          width: '50%',
+          marginTop: '10px',
+          
+        }}
+        name="topic"
+        value={props.topic}
+        onChange={props.handleInputChange}
+      />
+    </Box>
+    
+    <Box  display="flex"
+  justifyContent="center"
+  alignItems="center">
+    <TextField
+        id="filled-multiline-static1"
+        label="Arguement"
+        multiline
+        rows={4}
+        defaultValue=""
+        variant="filled"
+        style={{
+          backgroundColor: 'white',
+          width: '60%',
+          marginTop: '10px',
+          
+        }}
+        name="arguement"
+        value={props.arguement}
+        onChange={props.handleInputChange}
+      />
+    </Box>
+    <Box  display="flex"
+  justifyContent="center"
+  alignItems="center"
+  >
+    <TextField
+        id="filled-multiline-static2"
+        label="Counter Arguement"
+        multiline
+        rows={4}
+        defaultValue=""
+        variant="filled"
+        style={{
+          backgroundColor: 'white',
+          width: '60%',
+          marginTop: '10px',
+          
+        }}
+        name="counterArguement"
+        value={props.counterArguement}
+        onChange={props.handleInputChange}
+      />
+    </Box>
+    </Container>
 
-          <div
-            style={{
-              border: "solid #fcbf49 5px",
-              margin: "10px",
-              width: "100%",
-            }}
-          >
-            <label>
-              Side B:
-              <textarea type="text" id={challenger_body} />
-            </label>
-          </div>
-        </Box>
-      </Box>
-      <Button
-        onClick={debatePostClick}
-        style={{ color: "black", float: "left" }}
-      >
-        Submit
-      </Button>
-    </React.Fragment>
   );
 };
 
