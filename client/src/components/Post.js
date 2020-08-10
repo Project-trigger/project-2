@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
 
+
 const Post = () => {
   return (
     <React.Fragment>
@@ -33,8 +34,8 @@ const Post = () => {
         >
           <div
             style={{
-              border: 'solid #d62828 5px',
-              margin: '10px',
+              border: 'solid #F77F00 2px',
+              margin: '5px',
               width: '100%',
             }}
           >
@@ -46,8 +47,8 @@ const Post = () => {
 
           <div
             style={{
-              border: 'solid #fcbf49 5px',
-              margin: '10px',
+              border: 'solid #fcbf49 2px',
+              margin: '5px',
               width: '100%',
             }}
           >

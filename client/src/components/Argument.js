@@ -7,7 +7,7 @@ import { Next } from 'react-bootstrap/esm/PageItem';
 const Argument = ({ handlerNextClick, topic, incumbent_body, challenger_body }) => {
   return (
     <React.Fragment>
-      <Button onClick={handlerNextClick} style={{ color: "white", float: "right" }}>Next</Button>
+      <Button onClick={handlerNextClick} style={{ color: "Black", float: "right" }}>Next</Button>
       <Box>
         <Box
           display="flex"
