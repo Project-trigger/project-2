@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from "axios"
 
 
 
@@ -14,6 +13,7 @@ class Post extends Component {
       challenger_body: ''
     }
   }
+
 
   ChangeHandler = (e) => {
     this.setState({ [e.target.name]: e.target.value })
