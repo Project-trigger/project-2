@@ -14,7 +14,7 @@ CREATE TABLE users (
 
 CREATE TABLE debates (
   id INT NOT NULL AUTO_INCREMENT,
-  user_id VARCHAR(40) NOT NULL
+  user_id VARCHAR(40) NOT NULL,
   incumbent_username VARCHAR(20) NOT NULL,
   challenger_username VARCHAR(20) NULL,
   topic VARCHAR(100) NOT NULL,

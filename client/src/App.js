@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import Login from './pages/Login/Login';
-import Account from './pages/Account/Account';
 import Debate from './pages/Debate/Debate';
 import NewDebates from './pages/NewDebates/NewDebates';
 // import Trending from './pages/Trending/Trending';
@@ -10,7 +8,9 @@ import Navbar from "./components/Navbar";
 import Profile from "./components/Profile";
 
 
+
 import { Container } from "react-bootstrap";
+
 // import { useAuth0 } from "@auth0/auth0-react";
 import "./App.css";
 
@@ -25,8 +25,6 @@ const App = () => {
         <Route exact path="/profile" component={Profile} />
         {/* <Route path="/" exact component={Home} /> */}
         <Route exact path="/" component={Debate} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/account" component={Account} />
         <Route exact path="/debate" component={Debate} />
         <Route exact path="/newdebates" component={NewDebates} />
       </Switch>

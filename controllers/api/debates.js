@@ -3,24 +3,30 @@ var db = require("../../models");
 const { restart } = require("nodemon");
 
 // this function grabs debates from the debates table.
-router.get("/test", function(req, res) {
-  db.Debates.findAll({
-    }).then(function (dbDebate) {
-      const debates = []
-      console.log(dbDebate[0].topic)
+router.get("/test", function (req, res) {
+  db.Debates.findAll({}).then(function (dbDebate) {
+    const debates = [];
+    // console.log(dbDebate[0].topic);
+    if (dbDebate[0] && dbDebate[0].topic ) {
       for (let index = 0; index < dbDebate.length; index++) {
         const element = dbDebate[index];
         console.log(element.topic);
+
       let debate = {topic: "", incumbent_body: "", challenger_body: ""};
       debate.topic=element.topic;
       debate.incumbent_body=element.incumbent_body;
       debate.challenger_body=element.challenger_body;
       debates.push(debate)
+
       }
-      
+
       res.json(debates);
-    });
+    } else {
+      res.send("Topic not found");
+    }
+  });
 });
+
 
 router.post("/newdebates", function(req, res) {
   console.log(req.body)
@@ -45,5 +51,6 @@ router.post("/newdebates", function(req, res) {
  
 
 })
+
 
 module.exports = router;

@@ -69,9 +69,7 @@ const Navbar = () => {
             </Link>
             <Link to="/">
               {" "}
-              {isAuthenticated ? (
-                <>
-                  {" "}
+              {isAuthenticated ? (<>{" "}
                   <LogoutButton />{" "}
                 </>
               ) : (

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { TextField, Box } from '@material-ui/core';
 import { Container } from '@material-ui/core';
@@ -75,7 +76,8 @@ const Post = (props) => {
       />
     </Box>
     </Container>
+
   );
 };
 
-export default Post
+export default Post;

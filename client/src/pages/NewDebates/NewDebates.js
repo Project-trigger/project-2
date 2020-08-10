@@ -23,6 +23,7 @@ const NewPost = () => {
     console.log(value);
   }
 
+
   const handleSave= event => {
 console.log(state, user)
         const newdebates = {
@@ -41,10 +42,18 @@ console.log(state, user)
       // setResults(res.data)
       // changeContent(res.data[0], 0);
     })
-    
-  },[]
-  )
 
+    
+//   }
+
+  // function createDebate(debateData) {
+  //   var newDebate = $("");
+  //   newDebate.data("debates", debateData);
+  //   newDebate.append("" + debateData.topic + "")
+  //   newDebate.append("" + debateData.incumbent + "")
+  //   newDebate.append("" + debateData.challenger + "")
+  
+  // }
 
   return (
     <div className="form">
