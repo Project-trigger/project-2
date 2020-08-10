@@ -6,7 +6,7 @@ import { orange } from '@material-ui/core/colors';
 
 
 
-const Post = () => {
+const Post = (props) => {
   return (
     <Container fixed>
     <Box display="flex"
@@ -25,6 +25,9 @@ const Post = () => {
           marginTop: '10px',
           
         }}
+        name="topic"
+        value={props.topic}
+        onChange={props.handleInputChange}
       />
     </Box>
     
@@ -44,6 +47,9 @@ const Post = () => {
           marginTop: '10px',
           
         }}
+        name="arguement"
+        value={props.arguement}
+        onChange={props.handleInputChange}
       />
     </Box>
     <Box  display="flex"
@@ -63,6 +69,9 @@ const Post = () => {
           marginTop: '10px',
           
         }}
+        name="counterArguement"
+        value={props.counterArguement}
+        onChange={props.handleInputChange}
       />
     </Box>
     </Container>

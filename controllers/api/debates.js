@@ -1,5 +1,6 @@
 const router = require("express").Router();
 var db = require("../../models");
+const { restart } = require("nodemon");
 
 // this function grabs debates from the debates table.
 router.get("/test", function(req, res) {
@@ -22,10 +23,27 @@ router.get("/test", function(req, res) {
 });
 
 router.post("/newdebates", function(req, res) {
-  db.Debates.findAll({
-  }).then(function (dbDebate) {
-  console.log(dbDebate)
-})
+  console.log(req.body)
+
+  db.Users.create({
+    email: req.body.email,
+    username: req.body.username
+  }).then(function(result) {
+    console.log(result.id)
+    db.Debates.create({
+     user_id: result.id,
+     topic: req.body.topic,
+     incumbent_body: req.body.incumbent_body,
+     challenger_body: req.body.challenger_body,
+     incumbent_username: req.body.username
+
+    }).then(function (dbDebate) {
+      console.log(dbDebate)
+      res.json(dbDebate)
+    })
+  })
+ 
+
 })
 
 module.exports = router;
