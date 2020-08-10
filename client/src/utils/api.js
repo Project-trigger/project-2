@@ -12,8 +12,9 @@ export default {
   debates: function () {
     return axios.get("/api/debates/test");
   },
-  newdebates: function() {
-    return axios.post("/api/debates/newdebate");
+  newdebates: function(newdebates) {
+    console.log(newdebates)
+    return axios.post("/api/debates/newdebates", newdebates);
   },
   //   getDogsOfBreed: function(breed) {
   //     return axios.get("https://dog.ceo/api/breed/" + breed + "/images");
