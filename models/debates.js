@@ -5,12 +5,12 @@ module.exports = function (sequelize, DataTypes) {
     user_id: {
 
      type: DataTypes.INTEGER,
-     allowNull: false
+     allowNull: true
 
     },
     incumbent_username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     challenger_username: {
       type: DataTypes.STRING,
@@ -22,7 +22,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     incumbent_body: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     challenger_body: {
       type: DataTypes.STRING,
