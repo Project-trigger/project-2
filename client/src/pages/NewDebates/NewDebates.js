@@ -67,3 +67,4 @@ console.log(state, user)
 };
 
 export default NewPost;
+
