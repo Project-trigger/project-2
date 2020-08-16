@@ -1,6 +1,7 @@
 {
   "name": "mern",
   "version": "1.0.0",
+  "homepage": "https://project2-triggered.herokuapp.com/",
   "description": "",
   "main": "server.js",
   "scripts": {
