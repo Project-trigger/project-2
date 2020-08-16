@@ -14,9 +14,9 @@ const Auth0ProviderWithHistory = ({ children }) => {
 
   return (
     <Auth0Provider
-      domain= "dev-5efj--ws.us.auth0.com"
+      domain="dev-5efj--ws.us.auth0.com"
       clientId="NxukcrUg0iFQIOhV0e5C2W3hH6Xcxnfg"
-      redirectUri= "http://localhost:3000/"
+      redirectUri="https://project2-triggered.herokuapp.com/"
       onRedirectCallback={onRedirectCallback}
     >
       {children}
