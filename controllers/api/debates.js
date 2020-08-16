@@ -1,6 +1,5 @@
 const router = require("express").Router();
 var db = require("../../models");
-const { restart } = require("nodemon");
 
 // this function grabs debates from the debates table.
 router.get("/test", function (req, res) {
