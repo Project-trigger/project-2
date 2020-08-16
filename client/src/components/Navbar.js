@@ -61,7 +61,7 @@ const Navbar = () => {
             onClose={handleClose}
           >
             
-            <Link to="/debate">
+            <Link to="/">
               <MenuItem>View Debates</MenuItem>
             </Link>
             <Link to="/newdebates">
