@@ -1,15 +1,18 @@
-const express = require("express");
-const routes = require("./controllers");
+require('dotenv').config();
+const express = require('express');
+const routes = require('./controllers');
 const app = express();
 const PORT = process.env.PORT || 3001;
-var db = require("./models");
+const db = require('./models');
+const environment = process.env.NODE_ENV || 'development';
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/public"));
+console.log(process.env.NODE_ENV);
+if (environment === 'production') {
+  app.use(express.static('client/build'));
 }
 // Add routes, both API and view
 app.use(routes);
